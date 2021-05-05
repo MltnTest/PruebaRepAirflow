@@ -6,7 +6,7 @@
 
 function selectCode() {
 
-    return `SELECT id, CONCAT('Rank: ', CAST(id AS STRING))`;
+    return `GROUP BY date`;
 }
 
 module.exports = { selectCode };
