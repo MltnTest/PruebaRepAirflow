@@ -1,9 +1,19 @@
 {
-    "environments": [
+  "environments": [
+    {
+      "name": "production",
+      "configOverride": {},
+      "schedules": [
         {
-            "name": "production",
-            "configOverride": {},
-            "gitRef": "master"
+          "name": "Schedule_airflow",
+          "cron": "27 9 * * *",
+          "options": {
+            "includeDependencies": true
+          },
+          "disabled": true
         }
-    ]
+      ],
+      "gitRef": "master"
+    }
+  ]
 }

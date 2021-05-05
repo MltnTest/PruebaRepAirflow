@@ -1,0 +1,13 @@
+config {
+  type: "incremental",
+  schema: "staging",
+  description: "Bicycle trip count and duration by weather",
+}
+
+WITH array_to_loop_through AS (
+  SELECT id 
+  FROM UNNEST(GENERATE_ARRAY(1, 1000, 1)) id
+)
+/*SELECT id, CONCAT('Rank: ', CAST(id AS STRING))*/
+${ejemplojs.selectCode()}
+FROM array_to_loop_through
