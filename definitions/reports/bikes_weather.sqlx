@@ -1,4 +1,4 @@
-/*config {
+config {
   type: "view",
   schema: "staging",
   description: "Bicycle trip count and duration by weather",
@@ -14,6 +14,4 @@ from
 JOIN
   ${ref("nyc_weather")}
 USING(date)
---GROUP BY date
-${ejemplojs.selectCode()}
-*/
+${funcs_test.groupby()}
